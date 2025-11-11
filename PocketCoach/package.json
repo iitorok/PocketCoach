@@ -2,7 +2,7 @@
   "name": "pocketcoach",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://iitorok.github.io/PocketCoach",
+  "homepage": "https://iitorok.github.io/PocketCoach/",
   "type": "module",
   "scripts": {
     "dev": "vite",
