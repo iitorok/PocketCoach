@@ -42,7 +42,15 @@ h1{
   font-size: 50px;
   left: 42%;
   position: fixed;
-  color: greenyellow;
+  color: lightsalmon;
+}
+
+h2{
+  color: black;
+  font-size: 30px;
+  top: 85%;
+  left: 20%;
+  position: fixed;
 }
 
 #header-background{
@@ -63,8 +71,8 @@ h1{
   display: inline-block;
   width: 60px;
   height: 34px;
-  top: 87%;
-  left: 76%;
+  top: 90%;
+  left: 40%;
 }
 
 .switch input {
@@ -98,11 +106,11 @@ h1{
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: lightcoral;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px lightcoral;
 }
 
 input:checked + .slider:before {
