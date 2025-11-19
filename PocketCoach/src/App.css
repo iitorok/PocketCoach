@@ -38,11 +38,27 @@
   cursor: pointer;
 }
 
+#undo-button {
+  position: fixed;
+  top: 20%;
+  left: 10%;
+  background-color: gray;
+}
+
+
 h1{
   font-size: 50px;
   left: 42%;
   position: fixed;
-  color: lightsalmon;
+  color: white;
+  border-radius: 2px;
+}
+
+#header-container{
+  width: 100%;
+  background-color: lightsalmon;
+  height: 15%;
+  position: fixed;
 }
 
 h2{

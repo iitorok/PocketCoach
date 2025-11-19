@@ -30,6 +30,59 @@ function App() {
   //React state to hold user's position
   const [userLocation, setUserLocation] = useState(null);
 
+  const handleUndo = () => {
+    const lastMarker = markersRef.current[markersRef.current.length - 1];
+
+    //remove the marker obj
+    if(lastMarker){
+      lastMarker.remove();
+      markersRef.current.pop(); 
+    }
+    
+    
+    //remove the path obj
+    setPoints(prev => {
+    
+    const updated = prev.slice(0, -1);
+
+    //If there are 2+ points left, update the route line
+      if (updated.length > 1) {
+        const route = {
+          type: "Feature",
+          geometry: {
+          type: "LineString",
+          coordinates: updated
+        }
+      };
+
+      if (mapRef.current.getSource("route")) {
+        mapRef.current.getSource("route").setData(route);
+      }
+
+      //recalculate distance
+      const newDistance = turf.length(route, { units: "miles" });
+      setDistance(newDistance);
+    } 
+    else {
+      //if not enough points to draw a line → remove it
+      if (mapRef.current.getLayer("route-line")) {
+        mapRef.current.removeLayer("route-line");
+      }
+      if (mapRef.current.getSource("route")) {
+        mapRef.current.removeSource("route");
+      }
+
+      //reset distance
+      setDistance(0);
+    }
+
+    return updated;
+  });
+      
+    
+  };
+
+
 
     useEffect(() => {
     //ask the browser for the user's current position
@@ -155,7 +208,11 @@ function App() {
 
   return (
     <>
+      <div id='header-container'/>
       <h1> Map a Run </h1>
+      <button id='undo-button' onClick={handleUndo}>
+        Undo
+      </button>
       <h2> Distance: {distance.toFixed(2)}</h2>
       <div id='map-container' ref={mapContainerRef}/>
       <button id='save-button'> 
