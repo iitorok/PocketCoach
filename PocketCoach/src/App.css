@@ -58,6 +58,7 @@ h1{
   width: 100%;
   background-color: lightsalmon;
   height: 15%;
+  top: 1%;
   position: fixed;
 }
 
@@ -67,6 +68,29 @@ h2{
   top: 85%;
   left: 20%;
   position: fixed;
+}
+
+h3{
+  color:black;
+  font-size: 50px;
+}
+
+.title{
+  color:salmon;
+  top: 5%;
+  position: fixed;
+  font-size: 60px;
+  left: 40%;
+}
+
+#tomapbutton{
+  background-color:bisque;
+  height: 75px;
+  width: 250px;
+  position:fixed;
+  font-size: 20px;
+  top: 40%;
+  left: 44%;
 }
 
 #header-background{
