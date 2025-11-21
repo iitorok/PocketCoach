@@ -15,6 +15,13 @@
   background-color: lightgrey;
 }
 
+#training-plan-div{
+  background-color: blueviolet;
+  position: fixed;
+  width: 50%;
+  height: 100%;
+}
+
 .sidebar {
   background-color: rgb(35 55 75 / 90%);
   color: #fff;
@@ -36,6 +43,21 @@
   padding: 4px 10px;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.background-pocket{
+  width: 624px;
+  height: 604px;
+  left: 32%;
+  top: 10%;
+  position: fixed;
+  background-image:url('./Pocket.png');
+}
+
+.home-background{
+  width: 100%;
+  height: 100%;
+  background-color: darkslategray;
 }
 
 #undo-button {
@@ -76,7 +98,7 @@ h3{
 }
 
 .title{
-  color:salmon;
+  color:white;
   top: 5%;
   position: fixed;
   font-size: 60px;
@@ -89,7 +111,17 @@ h3{
   width: 250px;
   position:fixed;
   font-size: 20px;
-  top: 40%;
+  top: 45%;
+  left: 44%;
+}
+
+#toschedulebutton{
+  background-color:bisque;
+  height: 75px;
+  width: 250px;
+  position:fixed;
+  font-size: 20px;
+  top: 65%;
   left: 44%;
 }
 

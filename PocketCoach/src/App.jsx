@@ -12,6 +12,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 //import all the pages
 import { Home } from './home'
 import { MapRoute } from './maproute'
+import { Scheduling } from './schedule'
 
 //to navigate paths, /#/pathname
 
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/maproute" element={<MapRoute/>}/> 
+        <Route path="/scheduling" element={<Scheduling/>}/>
       </Routes>
     </Router>
   )

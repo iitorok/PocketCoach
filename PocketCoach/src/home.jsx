@@ -9,10 +9,18 @@ import { Link } from 'react-router-dom'
 export function Home(){
     return(
         <>
-            <h3 class="title">Pocket Coach</h3>
-            <Link to="/maproute">
-                <button id="tomapbutton"> Map a Route</button>
-            </Link>
+            <div class="home-background">
+                <div class="background-pocket">
+
+                    <h3 class="title">Pocket Coach</h3>
+                    <Link to="/maproute">
+                        <button id="tomapbutton"> Map a Route</button>
+                    </Link>
+                    <Link to="/scheduling">
+                        <button id="toschedulebutton">Training Plan</button>
+                    </Link>
+                </div>
+            </div>
         </>
     )
 }
