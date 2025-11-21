@@ -51,7 +51,7 @@
   left: 32%;
   top: 10%;
   position: fixed;
-  background-image:url('./Pocket.png');
+  background-image:url('/Pocket.png');
 }
 
 .home-background{
